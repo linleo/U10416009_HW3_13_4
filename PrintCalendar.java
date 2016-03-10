@@ -12,9 +12,9 @@ public class PrintCalendar
 		System.out.print(" Sun Mon Tue Wed Thu Fri Sat\n");
 		
 		int monthDay = getMonthDay(year, month, time);
-		int weekOFirstDay = time.get(GregorianCalendar.DAY_OF_WEEK);
+		int dayOfWeek = time.get(GregorianCalendar.DAY_OF_WEEK);
 		int day = 1;
-		for (day=1;day<=(weekOFirstDay-1);day++)
+		for (day=1;day<=(dayOfWeek-1);day++)
 		{
 			System.out.print("    ");
 		}
@@ -22,7 +22,7 @@ public class PrintCalendar
 		for (day=1;day<=monthDay;day++)
 		{
 			System.out.printf("%4d", day);
-			if ((day+weekOFirstDay-1) % 7 == 0)
+			if ((day+dayOfWeek-1) % 7 == 0)
 				System.out.println();
 		}	
 	}
