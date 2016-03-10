@@ -1,15 +1,11 @@
-import java.util.Scanner;
-
 public class TestPrintCalendar 
 {
 	public static void main(String[] args) 
-	{
-		Scanner input = new Scanner(System.in);
-		
-		System.out.print("Enter full year (e.g., 2001): ");
-		int year = input.nextInt();
-		System.out.print("Enter month in number between 1 and 12: ");
-		int month = input.nextInt();
+	{	
+		//first parameter
+		int month = Integer.parseInt(args[0]);
+		//second parameter
+		int year = Integer.parseInt(args[1]);
 		PrintCalendar calendar = new PrintCalendar();
 		calendar.displayCalendar(year, month);
 	}
