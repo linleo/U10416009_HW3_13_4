@@ -4,6 +4,7 @@ public class PrintCalendar
 {
 	PrintCalendar(){}
 	
+	//display specified month calendar
 	void displayCalendar(int year, int month)
 	{
 		GregorianCalendar time = new GregorianCalendar(year, month-1, 1);
@@ -26,6 +27,7 @@ public class PrintCalendar
 		}	
 	}
 	
+	//get the name of th month
 	String getMonthName(int month) 
 	{
 		String monthName = "";
@@ -47,6 +49,7 @@ public class PrintCalendar
 		return monthName;
 	}
 	
+	//get number of day in month
 	int getMonthDay(int year, int month, GregorianCalendar time)
 	{
 		int monthDay = 1;
