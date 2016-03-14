@@ -7,6 +7,9 @@ public class TestPrintCalendar
 		//second parameter
 		int year = Integer.parseInt(args[1]);
 		PrintCalendar calendar = new PrintCalendar();
-		calendar.displayCalendar(year, month);
+		if (month > 12 || month < 1)
+			System.out.print("Month is invalid, must be 1~12");
+		else
+			calendar.displayCalendar(year, month);
 	}
 }	
